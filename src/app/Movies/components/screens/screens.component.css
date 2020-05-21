@@ -1,0 +1,28 @@
+.shows
+{
+    box-sizing: border-box;
+}
+.shows span
+{
+    margin: 0.4rem;;
+}
+.title-panel
+{
+    margin: 0.5rem;
+}
+.name
+{
+}
+.dates span
+{
+    padding: 10px 15px;
+    margin: 1rem;
+}
+.dates span:hover
+{
+    background-color: red;
+}
+.dates
+{
+    background-color: aquamarine;
+}

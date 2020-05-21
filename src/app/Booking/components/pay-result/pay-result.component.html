@@ -1,0 +1,65 @@
+<div class="container">
+    <div *ngIf="ticket!=undefined" class="text-center bg-success rounded large result p-5 text-white">
+        Done
+    </div>
+    <div *ngIf="ticket==undefined" class="text-center bg-danger rounded large result p-5 text-white">
+        Failed
+    </div>
+    <dt>Ticket Details</dt>
+    <hr/>
+    <div class="m-3  row"  *ngIf="ticket!=undefined">
+        <div class="movieDetails shadow-sm col-sm-6 d-flex w-100 border p-1">
+            <!-- <div class=" col-4 p-0 border-0 d-table-cell"> -->
+                <img class="card-img-top col-4 p-0"  [src]="ticket.movie.imageLink" alt="Movie">
+            <!-- </div> -->
+            <div class="card flex-grow-1 border-0">
+                <div class="card-body">
+                    <h5 class="card-title">{{ticket.movie.movieName}}</h5>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>BookingId</td>
+                            <td>{{ticket.bookingId}}</td>
+                        </tr>
+                        <tr>
+                            <td>TicketId</td>
+                            <td>{{ticket.ticket.ticketId}}</td>
+                        </tr>
+                        <tr>
+                            <td>TransactionId</td>
+                            <td>{{ticket.transactionId}}</td>
+                        </tr>
+                        <tr>
+                            <td>Show Time</td>
+                            <td>{{ticket.show.showStartTime | date:'short'}}</td>
+                        </tr>
+                        <tr>
+                            <td>number of Seats</td>
+                            <td>{{ticket.ticket.noOfSeats}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total Cost</td>
+                            <td>{{ticket.totalCost}}</td>
+                        </tr>
+                        <tr>
+                            <td>Show Name</td>
+                            <td>{{ticket.show.showName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Screen Name</td>
+                            <td>{{ticket.show.screenName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{ticket.show.theatre.theatreName}}, {{ticket.show.theatre.theatreCity}}</td>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 d-flex justify-content-end">
+            <a class="btn btn-sm pl-3 pr-3 btn-primary align-self-end m-2" href="/home">Home</a>
+        </div>
+    </div>
+</div>

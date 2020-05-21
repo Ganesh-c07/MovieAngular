@@ -1,0 +1,9 @@
+.table td
+{
+    padding: 0 !important;
+    font-size: 0.7rem;
+}
+
+.table{
+    margin-bottom: 0 !important;
+}
